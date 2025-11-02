@@ -13,6 +13,7 @@ import Users2 from './component/Users2/Users2.jsx';
 import UserDetails from './component/UserDetails/UserDetails.jsx';
 import Posts from './component/Posts/Posts.jsx';
 import PostDetails from './component/PostDetails/PostDetails.jsx';
+import NotFound404 from './component/NotFount404/NotFound404.jsx';
 
 const users2 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
 
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "/app",
     Component: App
+  },
+  {
+    path: "*",
+    element: <NotFound404></NotFound404>
   }
 ])
 
